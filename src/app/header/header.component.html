@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="logo">Nyagaki's Wholesale & Retail Shop</div>
+ 
+  <div class="user">
+    <div class="user-name"></div>
+    <div class="user-image">MN</div>
+  </div>
+  <div class="cart">
+    <fa-icon [icon]="faShoppingCart"></fa-icon>
+    <span>{{ cartItems.length }}</span>
+    <ul *ngIf="cartItems.length > 0">
+      <li *ngFor="let item of cartItems">
+        <span class="item-name">{{ item.name }}</span>
+        <span class="item-price">${{ item.price.toFixed(2) }}</span>
+        <button (click)="removeFromCart(item)">x</button>
+      </li>
+      <li class="total-price">
+        <span>Total</span>
+        <span>${{ totalPrice.toFixed(2) }}</span>
+      </li>
+      <li>
+        <button (click)="checkout()">Checkout</button>
+      </li>
+    </ul>
+  </div>
+</div>

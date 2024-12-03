@@ -1,0 +1,16 @@
+<div class="fruits-container">
+  <h1>Fruits Corner</h1>
+  <div class="image-row">
+    <div class="image-container" *ngFor="let fruit of fruits">
+      <p><strong>{{ fruit.name }}</strong></p>
+      <img [src]="fruit.image" alt="Fruits" />
+      <p>Price: ${{ fruit.price }}</p>
+      <button (click)="addToCart(fruit)">Add Cart</button>
+    </div>
+  </div>
+
+
+  <div *ngIf="notification" class="notification">
+    {{ notification }}
+  </div>
+</div>

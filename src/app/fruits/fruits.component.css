@@ -1,0 +1,43 @@
+.fruits-container {
+    text-align: center;
+    margin: 20px;
+    background-color:skyblue;
+  }
+  
+  .image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center images horizontally */
+    gap: 20px; /* Space between images */
+  }
+  
+  .image-container {
+    flex: 1 1 calc(33.333% - 20px); /* Ensure three images per row with spacing */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .image-container p {
+    margin: 0 0 10px 0; /* Adjust margin to add space between text and image */
+    font-weight: bold;
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  

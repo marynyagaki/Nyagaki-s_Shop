@@ -1,0 +1,15 @@
+<div class="cart">
+  <h2>Cart</h2>
+  <ul>
+    <li *ngIf="items.length === 0">Your cart is empty.</li>
+    <li *ngFor="let item of items">
+      <span>{{ item.name }}</span>
+      <span class="price">${{ item.price.toFixed(2) }}</span>
+    </li>
+  </ul>
+
+  <div *ngIf="items.length > 0" class="cart-footer">
+    <p>Total Price: ${{ total.toFixed(2) }}</p>
+    <button (click)="clearCart()">Clear Cart</button>
+  </div>
+</div>
